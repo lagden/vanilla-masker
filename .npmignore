@@ -1,11 +1,8 @@
-bankfacil:vanilla-masker
 build
-public
 tests
 .e*
 .g*
 .t*
-bower.json
 Grunt*.js
 
 !.npmignore
