@@ -1,8 +1,6 @@
-build
-tests
+test
 .e*
 .g*
 .t*
-Grunt*.js
-
+grunt*.js
 !.npmignore

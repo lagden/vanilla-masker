@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = grunt => {
 	const config = {
 		// Clean folders
@@ -8,11 +10,11 @@ module.exports = grunt => {
 		// Concat
 		concat: {
 			options: {
-				separator: ";"
+				separator: ';'
 			},
 			build: {
-				src: ["lib/vanilla-masker.js"],
-				dest: "build/vanilla-masker.min.js"
+				src: ['lib/vanilla-masker.js'],
+				dest: 'build/vanilla-masker.min.js'
 			}
 		},
 
@@ -28,14 +30,14 @@ module.exports = grunt => {
 
 		// JSHint
 		jshint: {
-			all: ["lib/vanilla-masker.js"]
+			all: ['lib/vanilla-masker.js']
 		},
 
 		// Minification
 		uglify: {
 			minify: {
 				files: {
-					"build/vanilla-masker.min.js": ["build/vanilla-masker.min.js"]
+					'build/vanilla-masker.min.js': ['build/vanilla-masker.min.js']
 				}
 			}
 		},
@@ -84,17 +86,17 @@ module.exports = grunt => {
 	};
 
 	grunt.initConfig(config);
-	grunt.loadNpmTasks("grunt-contrib-clean");
-	grunt.loadNpmTasks("grunt-contrib-concat");
-	grunt.loadNpmTasks("grunt-contrib-jshint");
-	grunt.loadNpmTasks("grunt-contrib-uglify");
-	grunt.loadNpmTasks("grunt-contrib-jasmine");
+	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-jasmine');
 	grunt.loadNpmTasks('grunt-contrib-compress');
 	grunt.loadNpmTasks('grunt-contrib-connect');
-	grunt.loadNpmTasks("grunt-contrib-watch");
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask("default", ["jshint", "jasmine:dev"]);
-	grunt.registerTask("test", ["default"]);
-	grunt.registerTask("dev", ["default", "clean:dev", "concat:dev", "connect", "watch"]);
-	grunt.registerTask("build", ["default", "clean:build", "concat:build", "uglify", "compress"]);
+	grunt.registerTask('default', ['jshint', 'jasmine:dev']);
+	grunt.registerTask('test', ['default']);
+	grunt.registerTask('dev', ['default', 'clean:dev', 'concat:dev', 'connect', 'watch']);
+	grunt.registerTask('build', ['default', 'clean:build', 'concat:build', 'uglify', 'compress']);
 };

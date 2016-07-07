@@ -1,6 +1,6 @@
 {
   "name": "lagden-vanilla-masker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "VanillaMasker is a pure javascript input mask.",
   "main": "lib/vanilla-masker.js",
   "scripts": {
@@ -21,8 +21,11 @@
   ],
   "author": [
     "Caio Ribeiro Pereira <caio.ribeiro.pereira@gmail.com>",
-    "Leandro Alvares da Costa <leandroadacosta@gmail.com>",
-    "Thiago Lagden <lagden@gmail.com>"
+    "Leandro Alvares da Costa <leandroadacosta@gmail.com>"
+  ],
+  "files": [
+    "build",
+    "lib"
   ],
   "license": "MIT",
   "bugs": {
